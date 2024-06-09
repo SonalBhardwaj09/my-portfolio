@@ -1,0 +1,534 @@
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <title>Portfolio</title>
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        body {
+
+            /* font-family: 'Josefin Sans', sans-serif; */
+
+            font-family: 'Poppins', sans-serif;
+
+            max-height: 100vh;
+
+            background-color: #1F252E;
+
+        }
+
+
+
+        /*nav */
+
+        header {
+
+            padding: 1.7rem 1rem;
+
+            background-color: #fff;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            max-width: 80%;
+
+            margin: auto;
+
+            align-items: center;
+
+            background-color: transparent;
+
+        }
+
+
+
+        .logo {
+
+            font-size: .7rem;
+
+            font-weight: 300;
+            width: 300px;
+
+        }
+
+
+
+        .logo a {
+
+            color: #fff;
+
+            
+
+        }
+
+
+
+        nav a {
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-size: .97rem;
+
+            font-weight: 600;
+
+            letter-spacing: .7px;
+
+            padding: 1rem;
+
+            padding: 0.4rem 1rem;
+
+        }
+
+
+
+        nav a.active,
+
+        nav a:hover {
+
+            color: #00E8F8;
+
+            border-radius: 1rem;
+
+            transition: all.3s ease-in-out;
+
+        }
+
+
+
+        #click {
+
+            display: none;
+
+        }
+
+
+
+        .menu i {
+
+            color: #00E8F8;
+
+        }
+
+
+
+        .menu {
+
+            display: none;
+
+        }
+
+
+
+        /* Nav */
+
+
+
+        section {
+
+            margin: 2rem 8.5rem;
+
+            ;
+
+        }
+
+
+
+        .main {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin: 5rem auto;
+
+        }
+
+
+
+        .main h1 {
+
+            font-size: 2.5rem;
+
+            font-weight: 600;
+
+            color: #fff;
+
+            /* animation: check 1s ease forwards;
+
+            animation-delay: .1s; */
+
+        }
+
+
+
+        .main p {
+
+            margin-top: 1rem;
+
+            font-size: .98rem;
+
+            color: #fff;
+
+        }
+
+
+
+        .social {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 1.4rem;
+
+            margin-top: 1.7rem;
+
+        }
+
+
+
+        .social a {
+
+            color: #00E8F8;
+
+            font-size: 1rem;
+
+            border: 1.6px solid #00E8F8;
+
+            border-radius: 50%;
+
+            padding: .35rem;
+
+            text-align: center;
+
+            width: 26px;
+
+        }
+
+
+
+        .social a:hover {
+
+            color: #1F252E;
+
+            background-color: #00E8F8;
+
+            box-shadow: 0 0 20px #00E8F8;
+
+            transition: all .3s ease-in-out;
+
+        }
+
+
+
+        .main h1 span:nth-child(1) {
+
+            font-size: 1.5rem;
+
+        }
+
+
+
+        .main h1 span:nth-child(2) {
+
+            color: #00E8F8;
+
+        }
+
+
+
+        .images {
+
+            background-repeat: no-repeat;
+
+            background-position: 0 -75px;
+
+            -webkit-box-shadow: 0 10px 5px -10px #000000;
+
+            -moz-box-shadow: 0 10px 5px -10px #000000;
+
+            box-shadow: 0px 16px 4px -10px #00E8F8;
+
+            text-align: center;
+
+            width: 550px;
+
+            background-size: cover;
+
+        }
+
+
+
+        /* @keyframes check {
+
+            0% {
+
+                transform: translateY(-100px);
+
+                opacity: 0;
+
+            }
+
+
+
+            100% {
+
+                transform: translateY(0);
+
+                opacity: 1;
+
+            }
+
+        } */
+
+
+
+        @media only screen and (max-width:480px) {
+
+            .menu {
+
+                display: block;
+
+                font-size: 1.5rem;
+
+                font-weight: bold;
+
+                color: #244D61;
+
+            }
+
+
+
+            header {
+
+                padding: 0.7rem 1rem;
+
+                align-items: center;
+
+                max-width: 100%;
+
+            }
+
+
+
+            nav {
+
+                position: absolute;
+
+                display: grid;
+
+                top: 75px;
+
+                text-align: center;
+
+                background-color: #1F252E;
+
+                left: -100%;
+
+                z-index: 1;
+
+                width: 100%;
+
+            }
+
+
+
+            #click:checked~nav {
+
+                left: 0%;
+
+                transition: all 0.3s ease;
+
+            }
+
+
+
+            section {
+
+                margin: 1rem 1.5rem;
+
+            }
+
+
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <img src="logo.png"  alt="It's me" width="50%">
+
+        </div>
+
+        <input type="checkbox" id="click">
+
+        <label for="click" class="mainicon">
+
+            <div class="menu">
+
+                <i class="bi bi-list"></i>
+
+            </div>
+
+        </label>
+
+        <nav>
+
+            <a href="#" class="active">Home</a>
+
+            <a href="#About">About</a>
+
+            <a href="#Projects">Projects</a>
+
+            <a href="#Articles">Articles</a>
+
+            <a href="#Contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+    
+
+
+    <section>
+
+        <div class="main">
+
+            <div class="detail"><!---Sarah -->
+
+                <h1><span>Hello,</span> <br> I'm <span style="color:#00E8F8;">Sonal </span></h1>
+
+                <p>A Data Analyst</p>
+                <p>Dedicated to uncovering trends and solving problems with data.</p>
+                <p>Enjoy my portfolio!!</p>
+
+                <div class="social">
+
+                    <a href="https://github.com/SonalBhardwaj09" target="_blank"><i class="bi bi-github"></i></a>
+
+                    <a href="https://www.linkedin.com/in/sonal-bhardwaj-176975238" target="_blank"><i class="bi bi-linkedin"></i></a>
+
+
+                </div>
+
+            </div>
+
+            <div class="images">
+
+                <img src="taklu.png"  alt="It's me" width="50%">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="About" class="about-section">
+        
+
+            <h5>About Me</h5>
+            <br><p>
+            Hello, I am Sonal Bhardwaj, a dedicated Data Analyst currently working in a product-based company. With a Master’s in Computer Applications (MCA), I have a solid foundation in computer science and data analytics.
+            
+            During my time as a data science intern, I gained hands-on experience in data modeling, machine learning, and data visualization. This internship provided me with the opportunity to work on various projects that honed my analytical and technical skills.
+            
+            Now, as a Data Analyst, I specialize in transforming complex data into actionable insights that drive product innovation and business strategy. My expertise includes working with tools like SQL, Python, Advanced Excel, and Power BI, focusing on data visualization, statistical analysis, and predictive modeling.
+            
+            I am passionate about leveraging data to solve problems and improve decision-making processes. One of my notable projects involved scrapping data from online websites, which significantly contributed to my data cleaning and collecting skills.
+            
+            I am always eager to learn new technologies and methodologies in the evolving field of data analytics.
+            
+            Thank you for visiting my portfolio. Feel free to explore my projects and see how my skills and experience can benefit your organization.
+            
+            </p>
+        
+
+    </div>
+
+    <style>
+        .about-section {
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 6px solid #1a73e8;
+            color: #fff;
+            background-color: #1F252E;
+
+        }
+        .about-section h5 {
+            color: #00E8F8;
+            font-size: 25px;
+        }
+        .about-section p {
+            color:#fff;
+
+            font-family: 'Poppins', sans-serif;
+
+            max-height: 100vh;
+
+            background-color: #1F252E;
+
+            padding: 20px;
+            font-size: 15px;
+            line-height: 1.8;
+
+
+        }
+    </style>
+
+    
+
+</body>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+</style>
+
+<!-- <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+  </style> -->
+
+
+
+</html>
